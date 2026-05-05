@@ -1,7 +1,8 @@
-# ParFlow Docker 环境配置指南
+# ParFlow Docker 环境中文配置指南
 
 本镜像基于 Ubuntu 22.04，集成了 ParFlow 及其依赖（Hypre、OpenMPI、CLM），并内置 JupyterLab。
 
+更多有关ParFlow教程可以关注我们的公众号： **ParFlow Community**
 ---
 
 ## 环境要求
