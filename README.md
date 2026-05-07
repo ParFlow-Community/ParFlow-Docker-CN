@@ -2,6 +2,7 @@
 
 本镜像基于 Ubuntu 22.04，集成了 ParFlow 及其依赖（Hypre、OpenMPI、CLM），并内置 JupyterLab。
 
+更多有关ParFlow教程可以关注我们的公众号： **ParFlow Community**
 ---
 
 ## 环境要求
@@ -16,27 +17,24 @@
 ### 第一步：拉取镜像
 
 ```bash
-docker pull tangzy36/parflow-docker:v1.0
+docker pull parflowcommunity/parflow-docker-cn:v1.0
 ```
+
+> **Apple Silicon Mac 用户（M1/M2/M3）**：本镜像仅提供 amd64 架构，拉取时需指定平台，否则会报错：
+> ```bash
+> docker pull --platform linux/amd64 parflowcommunity/parflow-docker-cn:v1.0
+> ```
 
 ### 第二步：启动容器
 
-将本地的目录挂载到容器的 `/workspace`：
+在终端中先进入你的数据目录，再运行容器（`./` 表示当前目录，适用于所有平台）。**Windows 用户请使用 PowerShell，不要使用 CMD。**
 
 ```bash
+cd /你的数据目录路径
 docker run -d --rm \
-  -v /path/to/data:/workspace \
+  -v ./:/workspace \
   -p 8888:8888 \
-  tangzy36/parflow-docker:v1.0
-```
-
-**Windows 用户**请将路径替换为 Windows 格式，例如：
-
-```bash
-docker run -d --rm \
-  -v C:/Users/yourname/data:/workspace \
-  -p 8888:8888 \
-  tangzy36/parflow-docker:v1.0
+  parflowcommunity/parflow-docker-cn:v1.0
 ```
 
 ### 第三步：打开 JupyterLab
