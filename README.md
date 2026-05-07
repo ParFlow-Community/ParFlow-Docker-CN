@@ -1,8 +1,11 @@
 # ParFlow Docker 环境中文配置指南
 
-本镜像基于 Ubuntu 22.04，集成了 ParFlow 及其依赖（Hypre、OpenMPI、CLM），并内置 JupyterLab。
+本镜像基于 Ubuntu 22.04，编译并安装了[同时耦合 CLM 与 CoLM 的 ParFlow 特定版本](https://github.com/aureliayang/parflow)，同时安装了jupyterlab，matplotlib，numpy，pandas，xarray，netCDF4用于数据处理与可视化分析的Python基础依赖。
 
 更多有关ParFlow教程可以关注我们的公众号： **ParFlow Community**
+
+![ParFlow Community](ParFlowCommunity.jpg)
+
 ---
 
 ## 环境要求
@@ -20,14 +23,16 @@
 docker pull parflowcommunity/parflow-docker-cn:v1.0
 ```
 
-> **Apple Silicon Mac 用户（M1/M2/M3）**：本镜像仅提供 amd64 架构，拉取时需指定平台，否则会报错：
+> **Apple Silicon Mac 用户（M芯片）**：本镜像仅提供 amd64 架构，拉取时需指定平台，否则会报错：
 > ```bash
 > docker pull --platform linux/amd64 parflowcommunity/parflow-docker-cn:v1.0
 > ```
 
 ### 第二步：启动容器
 
-在终端中先进入你的数据目录，再运行容器（`./` 表示当前目录，适用于所有平台）。**Windows 用户请使用 PowerShell，不要使用 CMD。**
+在终端中先进入你的数据目录，再运行容器（`./` 表示当前目录，适用于所有平台）。
+
+**Windows 用户请使用 PowerShell，不要使用 CMD。**
 
 ```bash
 cd /你的数据目录路径
