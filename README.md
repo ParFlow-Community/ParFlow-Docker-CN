@@ -10,8 +10,7 @@
 
 ## 环境要求
 
-- 已安装 [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-- 根据用户的网络环境，需要使用科学上网，并打开代理软件的Tun模式。
+- 若未安装Docker，请先安装 [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ---
 
