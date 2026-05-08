@@ -1,6 +1,6 @@
 # ParFlow Docker 环境中文配置指南
 
-本镜像基于 Ubuntu 22.04，编译并安装了[同时耦合 CLM 与 CoLM 的 ParFlow 特定版本](https://github.com/aureliayang/parflow)，同时安装了jupyterlab，matplotlib，numpy，pandas，xarray，netCDF4用于数据处理与可视化分析的Python基础依赖。
+本镜像基于 Ubuntu 22.04，编译并安装了[同时耦合 CLM 与 CoLM 的 ParFlow 版本](https://github.com/aureliayang/parflow)，同时安装了jupyterlab，matplotlib，numpy，pandas，xarray，netCDF4用于数据处理与可视化分析的Python基础依赖。
 
 更多有关ParFlow教程可以关注我们的公众号： **ParFlow Community**
 
